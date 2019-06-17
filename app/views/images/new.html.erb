@@ -1,0 +1,13 @@
+<div class="text-center">
+<h2>Welcome to Image Sharer Application!</h2>
+<%= form_with scope: :image, local: true, url: {action:'create'} do |form| %>
+  <p>
+    <%= form.label :ImageURL%><br>
+    <%= form.text_field :url %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+</div>
