@@ -1,0 +1,19 @@
+current directory: /Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+/Users/apurva.bakshi/.rvm/rubies/ruby-2.5.3/bin/ruby -I /Users/apurva.bakshi/.rvm/rubies/ruby-2.5.3/lib/ruby/site_ruby/2.5.0 -r ./siteconf20190612-87729-1wk3ned.rb extconf.rb
+creating Makefile
+
+current directory: /Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190612-87729-1qu1bcv/byebug
