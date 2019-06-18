@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
 
   # @ is instance variable. Rails will pass instance var to view
   def create
-    @image = Image.new(params.require(:image).permit(:url))
+    @image = Image.new(params.require(:image).permit(:url, :tag_list))
 
     if check_url(@image.url)
       flash[:success] = 'Image saved to the database successfully!'
@@ -42,5 +42,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
   end
 
-  def index; end
+  def index
+    @image = Image.order('created_at DESC')
+  end
 end

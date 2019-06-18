@@ -1,6 +1,9 @@
-<p>
+<p><div class="text-center">
   <strong>Saved Image:</strong>
-  <img src=<%=@image.url%>>
+  <img src=<%=@image.url%> width='600' height='600'><br><br>
+
+  <strong>tags:</strong><%=@image.tag_list %><br><br>
   <%= link_to '<button type="button">Back</button>'.html_safe, '/images/new' %>
+  </div>
 </p>
 
