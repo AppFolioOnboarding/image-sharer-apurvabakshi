@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
   resources :images
+  # map.connect '/image/gettag/:id', :controller => 'image', action: 'gettag'
   # get 'images/show_my_new_image'
+  get('tags/:tag', to: 'images#index', as: :tag)
 end
