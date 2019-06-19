@@ -1,5 +1,7 @@
 class ImagesController < ApplicationController
-  def new; end
+  def new
+    @image = Image.order('created_at DESC')
+  end
 
   # @ is instance variable. Rails will pass instance var to view
   def create
@@ -18,7 +20,7 @@ class ImagesController < ApplicationController
   # Method which checks if urlvalue is a valid Http Image URL
   def check_url(urlvalue) # rubocop:disable Metrics/MethodLength
     url = URI.parse(urlvalue)
-    Net::HTTP.start(url.host, url.port) do |http|
+    Net::HTTP.start(url.host, url.port, use_ssl: true) do |http|
       response = http.head(url.path)
       case response
       when Net::HTTPSuccess, Net::HTTPRedirection
@@ -39,4 +41,6 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
   end
+
+  def index; end
 end

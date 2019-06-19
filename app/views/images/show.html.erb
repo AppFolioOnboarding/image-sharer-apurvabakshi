@@ -1,6 +1,6 @@
 <p>
   <strong>Saved Image:</strong>
-  <%img=@image.url %>
   <img src=<%=@image.url%>>
+  <%= link_to '<button type="button">Back</button>'.html_safe, '/images/new' %>
 </p>
 
