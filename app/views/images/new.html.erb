@@ -1,7 +1,8 @@
 <div class="text-center">
-<h2>Welcome to Image Sharer Application!</h2>
+<h3>Welcome to Image Sharer Application!</h3>
+
 <%= form_with scope: :image, local: true, url: {action:'create'} do |form| %>
-  <table class="align-content-center">
+ <table >
     <tr>
       <td><strong><%= form.label :ImageURL%></strong></td>
       <td><%= form.text_field :url %></td>
@@ -19,22 +20,22 @@
 
 
 <% end %>
-</div>
-<div>
+
   <br/>
-  <h2>Saved Images</h2>
+  <h4>Saved Images</h4>
 
  <table>
 
     <% @image.each do |img| %>
       <tr>
         <td> <img src='<%=img.url%>' width='400' height='400'></td>
-        <td>Tags: <%= img.tag_list %></td>
       </tr>
+     <tr>
+       <td>Tags: <%= img.tag_list %></td>
+     </tr>
     <% end %>
   </table>
 
- <!-- <%# @image.each do |img| %>
-    <img src='<%#=img.url%>' width='400' height='400'>
-  <%# end %>-->
+</div>
+
 </div>
