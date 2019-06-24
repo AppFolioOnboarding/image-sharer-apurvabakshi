@@ -1,9 +1,15 @@
-<p><div class="text-center">
+<p>
+<div class="text-center">
   <strong>Saved Image:</strong>
-  <img src=<%=@image.url%> width='600' height='600'><br><br>
+  <span class="js-image">
+  <img src=<%= @image.url %> width='600' height='600'><br><br>
+  </span>
 
-  <strong>tags:</strong><%=@image.tag_list %><br><br>
+  <strong>tags:</strong>
+  <span class="js-tag">
+    <%= @image.tag_list %>
+    </span><br><br>
   <%= link_to '<button type="button">Back</button>'.html_safe, '/images/new' %>
-  </div>
+</div>
 </p>
 

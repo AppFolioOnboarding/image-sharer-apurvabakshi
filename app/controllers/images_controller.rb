@@ -28,4 +28,11 @@ class ImagesController < ApplicationController
                Image.order('created_at DESC')
              end
   end
+
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+
+    redirect_to images_path
+  end
 end

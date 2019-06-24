@@ -1,19 +1,19 @@
 <div class="text-center">
 <h3>Welcome to Image Sharer Application!</h3>
 
-<%= form_with scope: :image, local: true, url: {action:'create'} do |form| %>
+<%= form_with scope: :image, local: true, id: 'img', url: {action:'create'} do |form| %>
  <table >
     <tr>
       <td><strong><%= form.label :ImageURL%></strong></td>
-      <td><%= form.text_field :url %></td>
+      <td><%= form.text_field :url, class: 'js-image-url' %></td>
     </tr>
     <tr>
       <td><strong><%= form.label :Tags,'Tags (comma separated list)'%></strong></td>
-      <td><%= form.text_field :tag_list %></td>
-     </tr>
+      <td><%= form.text_field :tag_list, class: 'js-image-tag' %></td>
+    </tr>
     <tr><td></td>
     <td><p>
-      <%= form.submit %>
+      <%= form.submit class: 'js-submit' %>
     </p></td>
     </tr>
   </table>
