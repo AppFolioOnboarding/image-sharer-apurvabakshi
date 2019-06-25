@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(params.require(:image).permit(:url, :tag_list))
 
-    if check_url(@image.url)
+    if @image.valid?
       flash[:success] = 'Image saved to the database successfully!'
       @image.save
       redirect_to @image
@@ -17,32 +17,15 @@ class ImagesController < ApplicationController
     end
   end
 
-  # Method which checks if urlvalue is a valid Http Image URL
-  def check_url(urlvalue) # rubocop:disable Metrics/MethodLength
-    url = URI.parse(urlvalue)
-    Net::HTTP.start(url.host, url.port, use_ssl: true) do |http|
-      response = http.head(url.path)
-      case response
-      when Net::HTTPSuccess, Net::HTTPRedirection
-        case response.content_type
-        when 'image/png', 'image/gif', 'image/jpeg'
-          return true
-        else
-          return false
-        end
-      else
-        return false
-      end
-    end
-  rescue StandardError
-    false
-  end
-
   def show
     @image = Image.find(params[:id])
   end
 
   def index
-    @image = Image.order('created_at DESC')
+    @image = if params[:tag]
+               Image.tagged_with(params[:tag]).order 'created_at DESC'
+             else
+               Image.order('created_at DESC')
+             end
   end
 end
