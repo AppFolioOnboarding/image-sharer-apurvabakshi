@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+module PropertyGemVersions
+  AE_PAGE_OBJECTS = '3.1.1'.freeze
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
@@ -23,6 +26,7 @@ gem 'webpacker', '~> 4'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
@@ -42,7 +46,7 @@ group :production do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'ae_page_objects'
   gem 'selenium-webdriver'
 end
 

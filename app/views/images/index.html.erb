@@ -6,20 +6,23 @@
   <h2>Saved Images</h2>
   <div class="row">
     <% @image.each do |img| %>
-    <div class="">
-      <div class="card">
+      <div class="">
+        <div class="card">
 
-        <div class="img-container">
-          <img src='<%=img.url%>' width='300' height='300'>
+          <div class="img-container">
+            <img src='<%=img.url%>' width='300' height='300'>
+          </div>
+
+          <div class="card-body">
+            <p class="card-text text-muted js-tag">Tags: <%= raw(img.tag_list.map { |t| link_to(t, tag_path(t)) }.join(', ')) %></p>
+            <p class="card-text"><%= link_to '<button type="button" class="js-delete">Delete</button>'.html_safe, image_path(img),
+                                                       method: :delete,
+                                                       data: { confirm: 'Are you sure you want to delete the Image?' } %></p>
+          </div>
+
         </div>
-
-        <div class="card-body">
-          <p class="card-text text-muted">Tags: <%= raw(img.tag_list.map { |t| link_to(t, tag_path(t)) }.join(', ')) %></p>
-        </div>
-
       </div>
-    </div>
     <% end %>
   </div>
-    </div>
+</div>
 
