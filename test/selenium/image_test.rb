@@ -1,4 +1,4 @@
-require '/Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/test/test_helper.rb'
+require 'test_helper'
 
 class ImageTest < ActionDispatch::IntegrationTest
   def test_add_image_test
