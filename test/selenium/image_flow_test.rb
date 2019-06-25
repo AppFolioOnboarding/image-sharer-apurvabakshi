@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ImageTest < ActionDispatch::IntegrationTest
+class ImageFlowTest < ActionDispatch::IntegrationTest
   def test_add_image_test
     # require 'pry'; binding.pry
     new_page = Images::NewPage.visit
