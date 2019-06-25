@@ -8,7 +8,6 @@ require 'ae_page_objects/rails'
 
 Dir[File.dirname(__FILE__) + '/page_objects/**/*.rb'].each { |file| require file }
 
-
 module ActiveSupport
   class TestCase
     include Capybara::DSL
@@ -19,8 +18,6 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
   end
-
-
 end
 
 module ActiveRecord

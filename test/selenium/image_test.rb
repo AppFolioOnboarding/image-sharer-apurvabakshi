@@ -1,16 +1,15 @@
 require '/Users/apurva.bakshi/Documents/Assignments/image-sharer-apurvabakshi/test/test_helper.rb'
 
 class ImageTest < ActionDispatch::IntegrationTest
-
   def test_add_image_test
     # require 'pry'; binding.pry
-  new_page = Images::NewPage.visit
-  image = new_page.img
-  image.url.set('https://static.toiimg.com/photo/msid-67868104/67868104.jpg?1368689')
-  image.tag.set('red, rose, flower')
-  show_page = new_page.submit!
+    new_page = Images::NewPage.visit
+    image = new_page.img
+    image.url.set('https://static.toiimg.com/photo/msid-67868104/67868104.jpg?1368689')
+    image.tag.set('red, rose, flower')
+    show_page = new_page.submit!
 
-  assert_equal 'red, rose, flower', show_page.tag.text
+    assert_equal 'red, rose, flower', show_page.tag.text
   end
 
   def test_delete_image_test
