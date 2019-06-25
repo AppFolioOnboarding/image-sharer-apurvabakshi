@@ -28,7 +28,7 @@ class ImagesControllerTest < ActionController::TestCase
 
   def test_create__invalid
     assert_no_difference 'Image.count' do
-      post :create, params: { image: { url: 'https://asdfgh.com/vi/deault.jpg', tag_list: 'a, b, c' } }
+      post :create, params: { image: { url: 'https://asqytcczer.com/vieault.jpg', tag_list: 'a, b, c' } }
     end
   end
 

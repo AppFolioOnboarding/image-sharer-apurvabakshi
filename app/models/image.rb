@@ -23,7 +23,7 @@ class Image < ApplicationRecord
         errors.add(:url, 'url is not valid')
       end
     end
-  rescue OpenSSL::SSL::SSLError
+  rescue OpenSSL::SSL::SSLError, SocketError
     errors.add(:url, 'url is not valid')
   end
 end
