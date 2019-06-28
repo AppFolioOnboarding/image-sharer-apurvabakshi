@@ -8,13 +8,13 @@ class Header extends Component {
   };
 
   render() {
-    const title = this.props.title;
+    const x = this.props.title;
     return (
       <div>
         <Row>
           <Col lg={{ size: 4, offset: 4 }}>
             <h3 className='text-center'>
-              {title}
+              {x}
             </h3>
           </Col>
         </Row>
