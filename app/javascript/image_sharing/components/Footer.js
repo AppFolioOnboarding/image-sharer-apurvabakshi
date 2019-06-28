@@ -19,7 +19,6 @@ class Footer extends Component {
           </p>
         </Row>
       </div>
-
     );
   }
 }
