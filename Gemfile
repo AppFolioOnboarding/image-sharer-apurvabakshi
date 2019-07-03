@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.1'
+ruby '2.5.3'
 
 module PropertyGemVersions
   AE_PAGE_OBJECTS = '3.1.1'.freeze

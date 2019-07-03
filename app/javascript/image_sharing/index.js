@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
+import ReactDOM from 'react-dom';
 import { FeedbackStore } from './stores/FeedbackStore';
 import App from './components/App';
 
