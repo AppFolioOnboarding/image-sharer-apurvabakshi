@@ -37,6 +37,6 @@
   "scripts": {
     "lint": "eslint app/javascript",
     "lint:fix": "eslint app/javascript --fix",
-    "test": "mocha --recursive --compilers js:babel-register --require app/javascript/testHelpers.js --require ignore-styles app/javascript/image_sharing/test/components"
+    "test": "mocha --recursive --compilers js:babel-register --require app/javascript/testHelpers.js --require ignore-styles app/javascript/image_sharing/test"
   }
 }
