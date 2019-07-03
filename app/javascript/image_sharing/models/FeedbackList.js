@@ -6,6 +6,7 @@ export default class FeedbackList {
   @observable feedbacks = [];
 
   @computed
+  // eslint-disable-next-line getter-return
   get feedbacksCount() {
     // return this.feedbacks.filter(feedback => !feedback.finished).length;
   }

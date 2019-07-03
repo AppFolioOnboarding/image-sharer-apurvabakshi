@@ -1,7 +1,6 @@
-import React from 'react';
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import FeedbackStore from '../../stores/FeedbackStore';
+import { FeedbackStore } from '../../stores/FeedbackStore';
 
 describe('FeedbackStore', () => {
   it('can set username', () => {
@@ -24,4 +23,4 @@ describe('FeedbackStore', () => {
     expect(newstore.feedback).to.equal('');
     expect(newstore.username).to.equal('');
   });
-})
+});

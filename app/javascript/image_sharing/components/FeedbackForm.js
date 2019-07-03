@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { action } from 'mobx';
 import { observer } from 'mobx-react';
-import { Form, FormGroup, Label, Input, Button, Row } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
 @observer
@@ -12,16 +12,16 @@ class FeedbackForm extends Component {
   render() {
     return (
       <Form>
-          <FormGroup>
-            <Label for='username'>Enter your name:</Label>
-            <Input className='usernameip' type='text' onChange={this.handleUnameInput} value={this.props.store.username} />
-          </FormGroup>
-          <FormGroup>
-            <Label for='feedback'>Feedback:</Label>
-            <Input className='feedbackip' type='textarea' onChange={this.handleFeedbackInput} value={this.props.store.feedback} />
-          </FormGroup>
-          <Button className='submit' onClick={this.submitFeedback}>Submit Feedback</Button>
-        </Form>
+        <FormGroup>
+          <Label for='username'>Enter your name:</Label>
+          <Input className='usernameip' type='text' onChange={this.handleUnameInput} value={this.props.store.username} />
+        </FormGroup>
+        <FormGroup>
+          <Label for='feedback'>Feedback:</Label>
+          <Input className='feedbackip' type='textarea' onChange={this.handleFeedbackInput} value={this.props.store.feedback} />
+        </FormGroup>
+        <Button className='submit' onClick={this.submitFeedback}>Submit Feedback</Button>
+      </Form>
     );
   }
   @action
