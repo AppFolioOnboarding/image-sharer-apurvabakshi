@@ -18,4 +18,4 @@ describe('<Header />', () => {
   it('is a Feedback page', () => {
     expect(wrapper.find('h3.text-center').contains('Tell us what you think'));
   });
-})
+});

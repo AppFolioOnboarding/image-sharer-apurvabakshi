@@ -1,8 +1,6 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
-import App from "./App";
-import PropTypes from "prop-types";
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 
 class Footer extends Component {
   /* Implement your Footer component here */
@@ -22,7 +20,7 @@ class Footer extends Component {
         </Row>
       </div>
 
-    )
+    );
   }
 }
 

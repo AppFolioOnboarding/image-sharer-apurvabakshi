@@ -18,4 +18,4 @@ describe('<Footer />', () => {
   it('says copyright of AppFolio', () => {
     expect(wrapper.find('p.text-center').contains('Copyright: Appfolio Inc. Onboarding'));
   });
-})
+});
